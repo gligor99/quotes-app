@@ -17,6 +17,7 @@ body {
   max-width: 620px;
   margin: 80px auto;
   align-self: center;
+  color: #e74848;
 }
 
 /* Blockquote header */
@@ -28,8 +29,8 @@ body {
   font-weight: normal;
   line-height: 1;
   margin: 0;
-  border: 2px solid #fff;
-  border: solid 2px #e74848;
+  border: 2px solid #e74848;
+  border: solid 2px;
   border-radius: 20px;
   padding: 25px;
 }
@@ -87,7 +88,6 @@ body {
 button {
   margin: 10px;
   font-family: "Barlow Condensed", sans-serif;
-  color: white;
 }
 /* Fill button styling */
 .fill {

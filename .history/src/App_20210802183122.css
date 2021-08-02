@@ -1,0 +1,191 @@
+body {
+  background-color: #292a2b;
+}
+
+/* center the blockquote in the page */
+.blockquote-wrapper {
+  display: flex;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+/* Blockquote main style */
+.blockquote {
+  position: relative;
+  font-family: "Barlow Condensed", sans-serif;
+  max-width: 620px;
+  margin: 80px auto;
+  align-self: center;
+}
+
+/* Blockquote header */
+.blockquote h1 {
+  font-family: "Abril Fatface", cursive;
+  position: relative; /* for pseudos */
+  color: #e74848;
+  font-size: 2.8rem;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  border: 2px solid #fff;
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+/* Blockquote right double quotes */
+.blockquote h1:after {
+  content: "";
+  position: absolute;
+  border: 2px solid #e74848;
+  border-radius: 0 50px 0 0;
+  width: 60px;
+  height: 60px;
+  bottom: -62px;
+  left: 50px;
+  border-bottom: none;
+  border-left: none;
+  z-index: 3;
+}
+
+.blockquote h1:before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  border: 6px solid #292a2b;
+  bottom: -3px;
+  left: 50px;
+  z-index: 2;
+}
+
+/* increase header size after 600px */
+@media all and (min-width: 600px) {
+  .blockquote h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+}
+
+/* Blockquote subheader */
+.blockquote h4 {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 1;
+  margin-left: 150px;
+  padding-left: 12px;
+}
+
+.blockquote h4:first-letter {
+  margin-left: -12px;
+}
+
+.button2 {
+  position: relative;
+  display: inline-block;
+  padding: 30px 61px;
+  border-radius: 4px;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 25px;
+  font-family: "Roboto", sans-serif;
+  filter: hue-rotate(0deg);
+  border: 2px solid #d2bdff;
+  transition: all 0.1s linear;
+}
+  &:hover {
+    border: 1px solid transparent;
+    span {
+      position: absolute;
+      display: block;
+    
+      &:nth-child(1) {
+        filter: hue-rotate(0deg);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #3a86ff);
+        animation: animate1 1s linear infinite;
+      }
+      @keyframes animate1 {
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        filter: hue-rotate(60deg);
+        top: -100%;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #3a86ff);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+
+      @keyframes animate2 {
+        0% {
+          top: -100%;
+        }
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+      &:nth-child(3) {
+        filter: hue-rotate(120deg);
+        bottom: 0;
+        right: 0;
+        width: 100%;
+
+        background: linear-gradient(270deg, transparent, #3a86ff);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+      @keyframes animate3 {
+        0% {
+          right: -100%;
+          height: 3px;
+        }
+        50%,
+        100% {
+          height: 2px;
+          right: 100%;
+        }
+      }
+
+      &:nth-child(4) {
+        filter: hue-rotate(300deg);
+        bottom: -100%;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #3a86ff);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+      @keyframes animate4 {
+        0% {
+          bottom: -100%;
+        }
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+    }
+  }
+}}}}}
+}

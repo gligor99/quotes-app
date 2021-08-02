@@ -3,28 +3,33 @@ import "./App.css";
 import Quote from "./Quote";
 
 // API URL
-const url = "https://api.quotable.io/random?maxLength=50";
+const url = "https://api.quotable.io/random";
 
 function App() {
-  const [quotes, setQuotes] = useState([]);
+  const [quotes, setQuotes] = useState([]) 
 
   const getQuote = () => {
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setQuotes(data));
+      .then((data) => setQuotes.data());
   };
 
-  useEffect(() => {
-    getQuote();
-  }, []);
+  useEffect(()=>{
+    getQuote()
+  })
 
   const getNewQuote = () => {
     getQuote();
   };
 
+
   return (
     <div className="App">
-      <Quote quotes={quotes} getNewQuote={getNewQuote}/>
+      <div class="blockquote-wrapper">
+  <div class="blockquote">
+  </div>
+</div>
+
     </div>
   );
 }

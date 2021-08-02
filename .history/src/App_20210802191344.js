@@ -3,7 +3,7 @@ import "./App.css";
 import Quote from "./Quote";
 
 // API URL
-const url = "https://api.quotable.io/random?maxLength=50";
+const url = "https://api.quotable.io/random";
 
 function App() {
   const [quotes, setQuotes] = useState([]);
@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     getQuote();
-  }, []);
+  }, [getNewQuote]);
 
   const getNewQuote = () => {
     getQuote();

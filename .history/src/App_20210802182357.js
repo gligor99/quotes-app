@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Quote from "./Quote";
 
 // API URL
-const url = "https://api.quotable.io/random?maxLength=50";
+const url = "https://api.quotable.io/random";
 
 function App() {
   const [quotes, setQuotes] = useState([]);
@@ -22,9 +21,17 @@ function App() {
     getQuote();
   };
 
+  const { content, author } = quotes;
+
   return (
     <div className="App">
-      <Quote quotes={quotes} getNewQuote={getNewQuote}/>
+      <div className="blockquote-wrapper">
+        <div className="blockquote">
+          <h1>{content}</h1>
+          <h4>{author}</h4>
+          <button onClick={getNewQuote}>next quote</button>
+        </div>
+      </div>
     </div>
   );
 }
